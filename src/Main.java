@@ -27,8 +27,23 @@ public class Main {
             System.out.println("Установите версию приложения для Android");
         }
     }
+
+    public static int deliveryCards () {
+        int deliveryDistance = 95;
+        int deliveryDays = 0;
+        if (deliveryDistance <= 20) {
+            return deliveryDays = 1;
+        } else if (deliveryDistance > 20 && deliveryDistance <= 60) {
+            return deliveryDays = 2;
+        } else if (deliveryDistance > 60 && deliveryDistance <= 100) {
+            return deliveryDays = 3;
+        }
+        return deliveryDays;
+    }
+
     public static void main(String[] args) {
         identifyLeapYear();
         installationApp();
+        System.out.println(deliveryCards());
     }
 }
